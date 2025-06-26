@@ -1,0 +1,27 @@
+version '3.8'
+services
+  backend
+    build .backend
+    ports
+      - 30013001
+    environment
+      - NODE_ENV=production
+    depends_on
+      - mongodb
+    
+  frontend
+    build .frontend
+    ports
+      - 8080
+    depends_on
+      - backend
+      
+  mongodb
+    image mongolatest
+    ports
+      - 2701727017
+    volumes
+      - mongodb_datadatadb
+
+volumes
+  mongodb_data
