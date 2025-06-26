@@ -59,9 +59,7 @@ hydroponics-iot-dashboard/
 │   ├── sensors.h
 │   ├── wifi_manager.h
 │   └── config.h
-├── .env.example
 ├── docker-compose.yml
-├── .gitignore
 └── README.md
 </pre>
 
