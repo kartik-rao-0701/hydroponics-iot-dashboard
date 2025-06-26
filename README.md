@@ -18,6 +18,57 @@ Complete full-stack IoT solution for hydroponic system monitoring and control.
 2. `cd frontend && npm install && npm start`
 3. Upload ESP32 code with your WiFi credentials
 
+## 🗂️ Project Structure
+
+<div style="background:#0d1117; padding:16px; border-radius:8px; color:#ffffff; font-family:monospace;">
+
+<pre>
+hydroponics-iot-dashboard/
+├── frontend/
+│   ├── public/
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── SensorCard.jsx
+│   │   │   ├── Charts.jsx
+│   │   │   └── Controls.jsx
+│   │   ├── hooks/
+│   │   │   └── useWebSocket.js
+│   │   ├── utils/
+│   │   │   └── api.js
+│   │   ├── App.jsx
+│   │   ├── index.js
+│   │   └── index.css
+│   ├── package.json
+│   └── tailwind.config.js
+├── backend/
+│   ├── routes/
+│   │   ├── sensors.js
+│   │   └── controls.js
+│   ├── models/
+│   │   └── SensorData.js
+│   ├── middleware/
+│   │   └── auth.js
+│   ├── server.js
+│   ├── websocket.js
+│   └── package.json
+├── esp32/
+│   ├── hydroponics_controller.ino
+│   ├── sensors.h
+│   ├── wifi_manager.h
+│   └── config.h
+├── .env.example
+├── docker-compose.yml
+├── .gitignore
+└── README.md
+</pre>
+
+</div>
+
+
+
 ## Tech Stack
 - Frontend: React, Tailwind CSS, Recharts
 - Backend: Node.js, Express, Socket.io, MongoDB
